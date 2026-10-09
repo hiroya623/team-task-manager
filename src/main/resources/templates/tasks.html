@@ -80,7 +80,7 @@
                 <p>タスクはまだ登録されていません。</p>
             </div>
 
-            <article th:each="item : ${tasks}">
+            <article class="task-item" th:each="item : ${tasks}">
                 <hr>
                 <h3 th:text="${item.title}">タスク名</h3>
                 <p>
@@ -89,7 +89,10 @@
                 </p>
                 <p>
                     ステータス：
-                    <span th:text="${item.status}"></span>
+                    <span class="task-status"
+                        th:classappend="${item.status == '未着手'} ? ' status-not-started' : (${item.status == '進行中'} ? ' status-in-progress' : ' status-completed')"
+                        th:text="${item.status}">
+                    </span>
                 </p>
                 <p>
                     期限：
