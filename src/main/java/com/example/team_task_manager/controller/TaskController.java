@@ -74,15 +74,6 @@ public class TaskController {
         Model model
     ) {
 
-        if (!java.util.List.of("未着手", "進行中", "完了")
-                .contains(request.getStatus())) {
-            bindingResult.rejectValue(
-                    "status",
-                    "invalid.status",
-                    "正しいステータスを選択してください。"
-            );
-        }
-
         if (bindingResult.hasErrors()) {
             model.addAttribute(
                     "tasks",
@@ -115,6 +106,7 @@ public class TaskController {
         Authentication authentication
     ) {
         Task task = taskService.findById(id);
+
         checkTaskOwner(task, authentication);
 
         TaskUpdateRequest request = new TaskUpdateRequest();
@@ -139,15 +131,6 @@ public class TaskController {
     ) {
         Task existingTask = taskService.findById(id);
         checkTaskOwner(existingTask, authentication);
-
-        if (!java.util.List.of("未着手", "進行中", "完了")
-                .contains(request.getStatus())) {
-            bindingResult.rejectValue(
-                    "status",
-                    "invalid.status",
-                    "正しいステータスを選択してください。"
-            );
-        }
 
         if (bindingResult.hasErrors()) {
             model.addAttribute("taskId", id);

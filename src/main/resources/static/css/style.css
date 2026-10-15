@@ -247,3 +247,467 @@ form[method="get"] a:hover {
         padding: 8px 12px;
     }
 }
+
+/* ダッシュボード */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 6%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.dashboard-logo {
+    color: #2563eb;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dashboard-header form {
+    margin: 0;
+}
+
+.logout-button {
+    padding: 9px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background: #f3f4f6;
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+.welcome-card {
+    padding: 44px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #eff6ff, #ffffff);
+    border: 1px solid #dbeafe;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.06);
+}
+
+.dashboard-label {
+    margin: 0 0 12px;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.welcome-card h1 {
+    margin: 0 0 16px;
+    color: #1e3a8a;
+    font-size: 32px;
+}
+
+.welcome-message {
+    margin: 0 0 28px;
+    color: #4b5563;
+    line-height: 1.8;
+}
+
+.dashboard-primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 22px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.dashboard-primary-button:hover {
+    background: #1d4ed8;
+}
+
+.dashboard-info {
+    margin-top: 28px;
+    padding: 28px 32px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.dashboard-info h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.dashboard-info p {
+    color: #6b7280;
+    line-height: 1.8;
+}
+
+.dashboard-secondary-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dashboard-secondary-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .dashboard-header {
+        padding: 16px;
+    }
+
+    .dashboard-logo {
+        font-size: 17px;
+    }
+
+    .dashboard-container {
+        padding: 24px 16px;
+    }
+
+    .welcome-card {
+        padding: 28px 22px;
+    }
+
+    .welcome-card h1 {
+        font-size: 26px;
+    }
+
+    .dashboard-info {
+        padding: 22px;
+    }
+}
+
+/* =========================
+   タスク管理画面
+========================= */
+
+.task-header-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.task-header-nav > a {
+    color: #4b5563;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.task-header-nav > a:hover {
+    color: #2563eb;
+}
+
+.task-header-nav form {
+    margin: 0;
+}
+
+.task-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 32px 60px;
+}
+
+.task-page-heading {
+    margin-bottom: 28px;
+}
+
+.task-page-heading h1 {
+    margin: 0 0 10px;
+    color: #1e3a8a;
+    font-size: 32px;
+}
+
+.task-page-heading > div > p:last-child {
+    margin: 0;
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+.task-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.5fr);
+    align-items: start;
+    gap: 24px;
+}
+
+.task-panel {
+    min-width: 0;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.task-panel > h2 {
+    margin: 0 0 8px;
+    color: #1f2937;
+    font-size: 21px;
+}
+
+.panel-description {
+    margin: 0 0 24px;
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.task-panel .form-group {
+    margin-bottom: 18px;
+}
+
+.task-panel .form-group label {
+    color: #374151;
+}
+
+.task-panel .form-group input,
+.task-panel .form-group select,
+.task-panel .form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #1f2937;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.task-panel .form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.task-panel .form-group input:focus,
+.task-panel .form-group select:focus,
+.task-panel .form-group textarea:focus {
+    outline: 2px solid #bfdbfe;
+    border-color: #2563eb;
+}
+
+.task-panel .login-button {
+    width: 100%;
+}
+
+.task-search-form {
+    margin: 0 0 28px;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.task-search-form .form-group:last-of-type {
+    margin-bottom: 16px;
+}
+
+.task-search-form .login-button {
+    margin-bottom: 12px;
+}
+
+.clear-search-link {
+    display: inline-block;
+    color: #2563eb;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.clear-search-link:hover {
+    text-decoration: underline;
+}
+
+.task-list-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 16px;
+}
+
+.task-list-heading h3 {
+    margin: 0;
+    color: #374151;
+    font-size: 16px;
+}
+
+.task-count {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.empty-state {
+    padding: 28px 16px;
+    border: 1px dashed #cbd5e1;
+    border-radius: 10px;
+    color: #6b7280;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.empty-state p {
+    margin: 4px 0;
+}
+
+.task-card {
+    margin: 0 0 16px;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 11px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.035);
+    overflow-wrap: anywhere;
+}
+
+.task-card:last-child {
+    margin-bottom: 0;
+}
+
+.task-card-top {
+    margin-bottom: 12px;
+}
+
+.task-card > h3 {
+    margin: 0 0 10px;
+    color: #1f2937;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.task-card .task-description {
+    margin: 0 0 18px;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+
+.task-meta {
+    padding: 12px 0;
+    border-top: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.task-meta p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 6px 0;
+    color: #4b5563;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.meta-label {
+    min-width: 48px;
+    color: #9ca3af;
+}
+
+.task-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.task-actions form {
+    margin: 0;
+}
+
+.task-actions .edit-task-link,
+.task-actions .delete-task-button {
+    display: inline-block;
+    margin: 0;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.task-actions .edit-task-link {
+    border: 1px solid #bfdbfe;
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.task-actions .edit-task-link:hover {
+    background: #dbeafe;
+    text-decoration: none;
+}
+
+.task-actions .delete-task-button {
+    border: 1px solid #fecaca;
+    background: #fff1f2;
+    color: #b91c1c;
+}
+
+.task-actions .delete-task-button:hover {
+    background: #fee2e2;
+}
+
+@media (max-width: 900px) {
+    .task-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .task-page {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 600px) {
+    .task-page {
+        padding: 24px 14px 40px;
+    }
+
+    .task-page-heading h1 {
+        font-size: 27px;
+    }
+
+    .task-panel {
+        padding: 20px 16px;
+    }
+
+    .task-search-form {
+        padding: 16px;
+    }
+
+    .task-card {
+        padding: 16px;
+    }
+
+    .task-header-nav {
+        gap: 12px;
+    }
+
+    .task-header-nav > a {
+        font-size: 12px;
+    }
+
+    .dashboard-logo {
+        font-size: 16px;
+    }
+}

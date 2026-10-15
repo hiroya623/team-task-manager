@@ -5,15 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ダッシュボード | Team Task Manager</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 
 <body>
-    <h1>ダッシュボード</h1>
-    <p>ログインに成功しました。</p>
+    <header class="dashboard-header">
+        <a class="dashboard-logo" th:href="@{/dashboard}">
+            Team Task Manager
+        </a>
 
-    <form th:action="@{/logout}" method="post">
-        <button type="submit">ログアウト</button>
-    </form>
+        <form th:action="@{/logout}" method="post">
+            <button type="submit" class="logout-button">
+                ログアウト
+            </button>
+        </form>
+    </header>
+
+    <main class="dashboard-container">
+        <section class="welcome-card">
+            <p class="dashboard-label">DASHBOARD</p>
+            <h1>ダッシュボード</h1>
+            <p class="welcome-message">
+                ログインに成功しました。今日もタスクを整理して進めましょう。
+            </p>
+
+            <a class="dashboard-primary-button" th:href="@{/tasks}">
+                タスク一覧を見る
+                <span aria-hidden="true">→</span>
+            </a>
+        </section>
+
+        <section class="dashboard-info">
+            <h2>タスク管理</h2>
+            <p>
+                タスクの登録・編集・削除、キーワード検索、
+                ステータスによる絞り込みができます。
+            </p>
+
+            <a class="dashboard-secondary-link" th:href="@{/tasks}">
+                タスク管理を開始する →
+            </a>
+        </section>
+    </main>
 </body>
 
 </html>

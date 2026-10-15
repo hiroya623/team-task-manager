@@ -22,6 +22,7 @@ public class TaskUpdateRequest {
     )
     private String status = "未着手";
 
+    @org.springframework.format.annotation.DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dueDate;
 
     public String getTitle() {
