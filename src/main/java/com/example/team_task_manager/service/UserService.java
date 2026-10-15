@@ -42,7 +42,7 @@ public class UserService {
                 );
 
         return new UserResponse(user);
-    }
+        }
 
     public UserResponse create(UserCreateRequest request) {
 
